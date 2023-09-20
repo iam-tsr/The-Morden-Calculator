@@ -10,13 +10,13 @@ void factorial(int a) {
     for (int i = 1; i <= a; i++) {
         result *= i;
     }
-    printf("Output: %d\n", result);
+    printf("Output: %.2f\n", result);
 }
 
 /*Power calculation*/
 void power(int a, int b) {
     int result = pow(a, b);
-    printf("Output: %d\n", result);
+    printf("Output: %.2f\n", result);
 }
 
 int main() { 
@@ -24,7 +24,7 @@ int main() {
     /*Introduction*/
     printf("------------------Welcome!------------------\nIt's Morden Calculator ever with C programming.\n\n");
 
-    int x, y;
+    float x, y;
     char op;
 
     /*Mathematical Operation*/
@@ -47,7 +47,7 @@ int main() {
 
     /*Invalid number statement.
     which do not allow user to input any character*/
-    while (scanf("%d", &x) != 1 || x <= -1) {
+    while (scanf("%f", &x) != 1) {
         printf("Invalid input. Please enter a positive integer: ");
         while (getchar() != '\n'); // Clear input buffer
     }
@@ -57,7 +57,7 @@ int main() {
 
     /*Invalid number statement.
     which do not allow user to input any character*/
-    while (scanf("%d", &y) != 1 || y <= -1) {
+    while (scanf("%f", &y) != 1) {
     printf("Invalid input. Please enter a positive integer: ");
     while (getchar() != '\n'); // Clear input buffer
     }
@@ -65,13 +65,13 @@ int main() {
     /*Operation outcome*/
     switch (op)
     {
-    case '+' : printf("Output: %d\n", x+y);
+    case '+' : printf("Output: %.2f\n", x+y);
         break;
-    case '-' : printf("Output: %d\n", x-y);
+    case '-' : printf("Output: %.2f\n", x-y);
         break;
-    case '*' : printf("Output: %d\n", x*y);
+    case '*' : printf("Output: %.2f\n", x*y);
         break;
-    case '/' : printf("Output: %d\n", x/y);
+    case '/' : printf("Output: %.2f\n", x/y);
         break;
     case '^' : power(x, y);
         break;
